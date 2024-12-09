@@ -1,0 +1,76 @@
+[
+  {
+      "id": 1,
+      "title": "ASUS GT 1030",
+      "price": 3000,
+      "description": "Upgrade your PC with the reliable ASUS GT 1030, designed for smooth HD gaming.",
+      "image": "products/gt1030.png"
+  },
+  {
+      "id": 2,
+      "title": "Razer Orochi V2",
+      "price": 2500,
+      "description": "Lightweight wireless mouse for gaming and productivity.",
+      "image": "products/products/OIP (1).jpg"
+  },
+  {
+      "id": 3,
+      "title": "Rakk Dasig Wireless",
+      "price": 1000,
+      "description": "Wireless gaming mouse with precision and speed.",
+      "image": "products/products/R.jpg"
+  },
+  {
+      "id": 4,
+      "title": "Red Dragon Zeus 2",
+      "price": 2500,
+      "description": "High-performance wired gaming mouse with customizable RGB.",
+      "image": "products/products/OIP.jpg"
+  },
+  {
+      "id": 5,
+      "title": "Gamaxx Ag300",
+      "price": 800,
+      "description": "Efficient CPU air cooler with superior cooling capacity.",
+      "image": "products/products/02.jpg"
+  },
+  {
+      "id": 6,
+      "title": "Honor Pad X8 Pro 3",
+      "price": 12500,
+      "description": "Balanced performance, portability, and affordability.",
+      "image": "products/products/honor-pad-x8-pro-3.jpg"
+  },
+  {
+      "id": 7,
+      "title": "iPhone SE 3rd Generation",
+      "price": 15000,
+      "description": "Compact smartphone with powerful performance.",
+      "image": "products/products/Iphone.jpg"
+  },
+  {
+      "id": 8,
+      "title": "Magegee TS91",
+      "price": 2000,
+      "description": "Durable mechanical keyboard with RGB lighting.",
+      "image": "products/products/magegee.jpg"
+  },
+  {
+      "id": 9,
+      "title": "Lexar Thor 8 GB",
+      "price": 1500,
+      "description": "High-performance DDR4 RAM for optimized systems.",
+      "image": "products/products/lexar-thor-8-gb.jpg"
+  },
+  {
+      "id": 10,
+      "title": "Apple AirPods (2nd Generation)",
+      "price": 2500,
+      "description": "Premium sound and unmatched convenience.",
+      "image": "products/products/APPLE-AIRPODS-2ND-GEN-3.jpg"
+  }
+]
+
+
+
+

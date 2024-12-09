@@ -1,0 +1,489 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #625f5f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  font-family: "Public Sans", sans-serif;
+  z-index: 999;
+  height: 50px;
+}
+
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo1 a {
+  color: #333;
+  font-size: 1rem;
+  font-family: "Public Sans", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  gap: 5px;
+}
+
+.logo1 p {
+  font-size: 10px;
+  color: #00BFFF;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.logohead {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.logohead:hover {
+  transform: rotate(360deg);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 3rem;
+  margin-right: 70px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  font-family: "Public Sans", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #073aa7;
+  transform: scale(1.1);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #073aa7;
+  transition: width 0.3s ease;
+  font-family: "Public Sans", sans-serif;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* cart_container*/
+.cart-container {
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: none;
+  z-index: 10;
+  width: 300px;
+}
+
+.cart-container:hover .cart-dropdown {
+  display: block;
+}
+
+.cart-dropdown ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  color: rgb(0, 0, 0);
+}
+
+.cart-dropdown ul li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-dropdown button {
+  background-color: #00BFFF;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #00BFFF; 
+  color: white; 
+  padding: 0.5rem; 
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  font-size: 14px; 
+  text-transform: none; 
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+.cart-dropdown button:hover {
+  background-color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .logo2 {
+    margin-top: 20px;
+    padding: 1.5rem;
+  }
+
+  .logo1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logohead {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+/* Booking Button */
+.booking {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  background-color: #eef0f0;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  text-align: left;
+  padding-left: 10px;
+  font-family: "Public Sans", sans-serif;
+}
+
+.booking button {
+  background-color: rgb(4, 4, 78);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+  height: 70px;
+  margin-right: 100px;
+  width: 400px;
+  margin-top: 50px;
+}
+
+.booking button:hover {
+  background-color: #0caae9;
+}
+
+/* Footer */
+.footer2 {
+  text-align: center;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: opx;
+}
+
+/* Import necessary fonts and icons */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+
+.container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); 
+grid-gap: 20px;
+justify-items: center;
+align-items: center; 
+margin: 0 auto;
+max-width: 1200px; 
+padding: 20px;
+margin-bottom: 100px;
+margin-top: 100px;
+row-gap: 50px;
+}
+
+
+figure.snip1477 {
+font-family: 'Raleway', Arial, sans-serif;
+position: relative;
+overflow: hidden;
+margin: 0;
+min-width: 230px;
+max-width: 315px;
+width: 100%;
+color: #efeef7;
+text-align: center;
+font-size: 16px;
+background-color: #000000;
+border-radius: 8px; 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 1; 
+transition: all 0.3s ease;
+}
+
+
+figure.snip1477 * {
+box-sizing: border-box;
+transition: all 0.55s ease;
+}
+
+figure.snip1477 img {
+max-width: 100%;
+backface-visibility: hidden;
+vertical-align: top;
+opacity: 0.9;
+border-radius: 8px; 
+}
+
+/* Title styling */
+figure.snip1477 .title {
+position: absolute;
+top: 58%;
+left: 25px;
+padding: 5px 10px 10px;
+width: calc(100% - 50px); 
+}
+
+figure.snip1477 .title:before,
+figure.snip1477 .title:after {
+height: 2px;
+width: 400px;
+position: absolute;
+content: '';
+background-color: #ffffff;
+}
+
+figure.snip1477 .title:before {
+top: 0;
+left: 10px;
+transform: translateX(100%);
+}
+
+figure.snip1477 .title:after {
+bottom: 0;
+right: 10px;
+transform: translateX(-100%);
+}
+
+figure.snip1477 .title div:before,
+figure.snip1477 .title div:after {
+width: 2px;
+height: 300px;
+position: absolute;
+content: '';
+background-color: #ffffff;
+}
+
+figure.snip1477 .title div:before {
+top: 10px;
+right: 0;
+transform: translateY(100%);
+}
+
+figure.snip1477 .title div:after {
+bottom: 10px;
+left: 0;
+transform: translateY(-100%);
+}
+
+figure.snip1477 h2,
+figure.snip1477 h4 {
+margin: 0;
+text-transform: uppercase;
+}
+
+figure.snip1477 h2 {
+font-weight: 400;
+}
+
+figure.snip1477 h4 {
+display: block;
+font-weight: 700;
+background-color: #ffffff;
+padding: 5px 10px;
+color: #000000;
+}
+
+/* Figcaption styling */
+figure.snip1477 figcaption {
+position: absolute;
+bottom: 42%;
+left: 25px;
+text-align: left;
+opacity: 0;
+padding: 5px 60px 5px 10px;
+font-size: 0.8em;
+font-weight: 500;
+letter-spacing: 1.5px;
+}
+
+figure.snip1477 figcaption p {
+margin: 0;
+}
+
+figure.snip1477 a {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
+
+/* Hover Effects */
+figure.snip1477:hover img {
+opacity: 0.35;
+}
+
+figure.snip1477:hover .title:before,
+figure.snip1477:hover .title:after,
+figure.snip1477:hover .title div:before,
+figure.snip1477:hover .title div:after {
+transform: translate(0, 0);
+}
+
+figure.snip1477:hover figcaption {
+opacity: 1;
+transition-delay: 0.2s;
+}
+
+
+.services h1 {
+  font-size: 50px;
+  line-height: 0px;
+  color: #030441;
+}
+.intro {
+  text-align: center;
+  background-image: url(/images/motherboardlap.jpg);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 200px;
+
+}
+.intro h1 {
+  color: #01014e;
+  font-size: 70px;
+  font-family: sans-serif;
+}
+/*footer logo */
+footer {
+  padding-top: 10px;
+}
+.footer_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.footer_logo a {
+  color: #ccc5c5;
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  gap: 5px;
+}
+
+.footer_logo p {
+  font-size: 10px;
+  color: #00BFFF;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.social_logos {
+  display: flex;
+  gap: 50px;
+}
+
+.social_logos img {
+  padding-top: 12px;
+}
+
+.footer2 {
+  background-color: #2c2c2c;
+  padding: 0;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: white;
+  background-color: rgb(85, 83, 83);
+  font-family: "Public Sans", sans-serif;
+}
+.socials_logo {
+  gap: 10px;
+  display: flex;
+}
+.socials_logo img {
+  border-radius: 100%;
+}

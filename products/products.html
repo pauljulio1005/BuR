@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/products/product.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo1">
+        <div>
+          <img class="logohead" src="/burnetlogo.png" alt="Buy and Repair Logo">
+        </div>
+        <div>
+          <a href="/home/home.html">Buy and Repair.Net</a>
+          <p>BUY SMART, REPAIR BETTER</p>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/home/home.html">Home</a></li>
+        <li><a href="/about/about.html">About Us</a></li>
+        <li><a href="/services/services.html">Services</a></li>
+        <li><a href="/contact/contact.html">Contact Us</a></li>
+        <li><a href="/products/products.html">Products</a></li>
+        <li>
+          <div class="cart-container">
+            <a href="#" class="cart">Cart (<span id="cart-count">0</span>)</a>
+            <div class="cart-dropdown">
+              <ul id="cart-items"></ul>
+             <div id="cart-total">Total: ₱0.00</div>
+             <a href="/Checkout/checkout.html" id="checkout-button" class="checkout-button">Checkout</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+
+    <div class="imghdr">
+   
+  </div>
+
+    <div class="product-section">
+     
+      <div class="product-section">
+        
+        <div class="product" onclick="openModal(1)">
+          <img src="products/gt1030.png" alt="ASUS GT 1030" class="product-image" />
+          <div class="product-info">
+            <h3>ASUS GT 1030</h3>
+            <p>₱3,000<br>Upgrade your PC with the reliable ASUS GT 1030, designed for smooth HD gaming.</p>
+            <button class="add-to-cart" data-id="1" data-title="ASUS GT 1030" data-price='3000'>Add to Cart</button>
+          </div>
+        </div>        
+
+      
+        <div class="product" onclick="openModal(2)">
+        <img src="/products/products/OIP (1).jpg" alt="Razer Orochi V2" class="product-image" onclick="openModal('product-2')" />
+        <div class="product-info">
+          <h3>Razer Orochi V2</h3>
+          <p>₱2,500<br>
+            Lightweight wireless mouse for gaming and productivity.</p>
+            <button class="add-to-cart" data-id="2" data-title="Razer Orochi V2" data-price="2500">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(3)">
+        <img src="/products/products/R.jpg" alt="Rakk Dasig Wireless" class="product-image" onclick="openModal('product-3')" />
+        <div class="product-info">
+          <h3>Rakk Dasig Wireless</h3>
+          <p>₱1,000<br>
+            Wireless gaming mouse with precision and speed.</p>
+            <button class="add-to-cart" data-id="3" data-title="Rakk Dasig Wireless" data-price="1000">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(4)">
+        <img src="/products/products/OIP.jpg" alt="Red Dragon Zeus 2" class="product-image" onclick="openModal('product-4')" />
+        <div class="product-info">
+          <h3>Red Dragon Zeus 2</h3>
+          <p>₱2,500<br>
+            High-performance wired gaming mouse with customizable RGB.</p>
+            <button class="add-to-cart" data-id="4" data-title="Red Dragon Zeus 2" data-price="2500">Add to Cart</button>
+        </div>
+      </div>
+
+     
+      <div class="product" onclick="openModal(5)">
+        <img src="/products/products/02.jpg" alt="Gamaxx Ag300" class="product-image" onclick="openModal('product-5')" />
+        <div class="product-info">
+          <h3>Gamaxx Ag300</h3>
+          <p>₱800<br>
+            Efficient CPU air cooler with superior cooling capacity.</p>
+            <button class="add-to-cart" data-id="5" data-title="Gamaxx Ag300" data-price="800">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(6)">
+        <img src="/products/products/honor-pad-x8-pro-3.jpg" alt="Honor Pad X8 Pro 3" class="product-image" onclick="openModal('product-6')" />
+        <div class="product-info">
+          <h3>Honor Pad X8 Pro 3</h3>
+          <p>₱12,500<br>
+            Balanced performance, portability, and affordability.</p>
+            <button class="add-to-cart" data-id="6" data-title="Honor Pad X8 Pro 3" data-price="12500">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(7)">
+        <img src="/products/products/Iphone.jpg" alt="iPhone SE" class="product-image" onclick="openModal('product-7')" />
+        <div class="product-info">
+          <h3>iPhone SE 3rd Generation</h3>
+          <p>₱15,000<br>
+            Compact smartphone with powerful performance.</p>
+            <button class="add-to-cart" data-id="7" data-title="iPhone SE 3rd Generation" data-price="1500">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(8)">
+        <img src="/products/products/magegee.jpg" alt="Magegee TS91 2" class="product-image" onclick="openModal('product-8')" />
+        <div class="product-info">
+          <h3>Magegee TS91 </h3>
+          <p>₱2,000<br>
+            Durable mechanical keyboard with RGB lighting.</p>
+            <button class="add-to-cart" data-id="8" data-title="Magegee TS91 " data-price="2000">Add to Cart</button>
+        </div>
+      </div>
+
+      
+      <div class="product" onclick="openModal(9)">
+        <img src="/products/products/lexar-thor-8-gb.jpg" alt="Lexar Thor 8 GB" class="product-image" onclick="openModal('product-9')" />
+        <div class="product-info">
+          <h3>Lexar Thor 8 GB</h3>
+          <p>₱1,500<br>
+            High-performance DDR4 RAM for optimized systems.</p>
+            <button class="add-to-cart" data-id="9" data-title="Lexar Thor 8 GB" data-price="1500">Add to Cart</button>
+        </div>
+      </div>
+
+     
+      <div class="product" onclick="openModal(10)">
+        <img src="/products/products/APPLE-AIRPODS-2ND-GEN-3.jpg" alt="Apple AirPods (2nd Generation)" class="product-image" onclick="openModal('product-10')" />
+        <div class="product-info">
+          <h3>Apple AirPods (2nd Generation)</h3>
+          <p>₱2,500<br>
+            Premium sound and unmatched convenience.</p>
+            <button class="add-to-cart" data-id="10" data-title="Apple AirPods (2nd Generation)" data-price="2500">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="" style="width:100%; height:auto;">
+        <p id="modal-description"></p>
+        <ul id="modal-specs"></ul>
+        
+      </div>
+    </div>
+    </div>
+    <footer>
+      <div class="footer_logo">
+        <div>
+          <img class="logohead" src="/burnetlogo.png" alt="Buy and Repair Logo">
+        </div>
+      <div>
+        <a href="/home/home.html" style="font-size: 25px;">Buy and Repair.Net</a>
+        <p style="font-size: 15px;">BUY SMART, REPAIR BETTER</p>
+      </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <div class="social_logos">
+          <img src="/images/email_logo.webp" style="width: 30px; height: 30px;">
+          <p>bur.net@gmail.com </p>
+        </div>
+        <div class="social_logos">
+          <img src="/images/phone_logo.webp" style="width: 30px; height: 30px;">
+          <p>+63 9606 123 456</p>
+        </div>
+        <div class="social_logos">
+          <img src="/images/location_logo.webp" style="width: 30px; height: 30px;">
+          <p>Adamson University
+            900 San Marcelino Street,<br> Ermita
+            1000 Manila, Philippines</p>
+        </div>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="socials_logo">
+          <a href="https://www.facebook.com/profile.php?id=61569505502515" target="_blank">
+            <img src="/images/fb_logo.jpg" alt="Facebook Logo" style="width: 42px;">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="/images/ig_logo.webp" alt="Instagram Logo" style="width: 43px;" >
+          </a>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer2">
+      <p>&copy; 2024 Buy and Repair.Net  |  All Rights Reserved  |  Powered by poging Adamsonians</p>
+  </footer>
+    
+
+    <script src="/products/Addtocart.js"></script>
+    <script src="/products/modal.js"></script>
+    <script src="/products/products.json"></script>
+  </body>
+</html>

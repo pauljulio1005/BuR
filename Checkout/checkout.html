@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/checkout/checkout.css">
+</head>
+<body>
+    <nav>
+        <div class="logo1">
+          <div>
+            <img class="logohead" src="/burnetlogo.png" alt="Buy and Repair Logo">
+          </div>
+          <div>
+            <a href="/home/home.html">Buy and Repair.Net</a>
+            <p>BUY SMART, REPAIR BETTER</p>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/home/home.html">Home</a></li>
+          <li><a href="/about/about.html">About Us</a></li>
+          <li><a href="/services/services.html">Services</a></li>
+          <li><a href="/contact/contact.html">Contact Us</a></li>
+          <li><a href="/products/products.html">Products</a></li>
+        </ul>
+      </nav>
+
+    <h2>Checkout</h2>
+    <div id="checkout-items-container">
+        <!-- Items will be displayed here -->
+    </div>
+    <div id="checkout-total"></div>
+    <div class="container">
+        <h1>Checkout</h1>
+    
+        <!-- Product List -->
+        <div class="product-list">
+          <h2>Your Cart</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items">
+              <!-- Items dynamically populated -->
+            </tbody>
+          </table>
+          <div class="total-price">
+            <strong>Total: ₱<span id="total-price">0</span></strong>
+          </div>
+        </div>
+    
+        <!-- Checkout Form -->
+        <form id="checkout-form">
+          <h2>Billing Information</h2>
+          <input type="text" id="full-name" name="fullName" placeholder="Full Name" required>
+          <input type="email" id="email" name="email" placeholder="Email Address" required>
+          <input type="text" id="address" name="address" placeholder="Shipping Address" required>
+          <input type="text" id="contact-number" name="contactNumber" placeholder="Contact Number" required>
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
+
+      <footer>
+        <div class="footer_logo">
+          <div>
+            <img class="logohead" src="/burnetlogo.png" alt="Buy and Repair Logo">
+          </div>
+        <div>
+          <a href="/home/home.html" style="font-size: 25px;">Buy and Repair.Net</a>
+          <p style="font-size: 15px;">BUY SMART, REPAIR BETTER</p>
+        </div>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <div class="social_logos">
+            <img src="/images/email_logo.webp" style="width: 30px; height: 30px;">
+            <p>bur.net@gmail.com </p>
+          </div>
+          <div class="social_logos">
+            <img src="/images/phone_logo.webp" style="width: 30px; height: 30px;">
+            <p>+63 9606 123 456</p>
+          </div>
+          <div class="social_logos">
+            <img src="/images/location_logo.webp" style="width: 30px; height: 30px;">
+            <p>Adamson University
+              900 San Marcelino Street,<br> Ermita
+              1000 Manila, Philippines</p>
+          </div>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="socials_logo">
+            <a href="https://www.facebook.com/profile.php?id=61569505502515" target="_blank">
+              <img src="/images/fb_logo.jpg" alt="Facebook Logo" style="width: 42px;">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+              <img src="/images/ig_logo.webp" alt="Instagram Logo" style="width: 43px;" >
+            </a>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer2">
+        <p>&copy; 2024 Buy and Repair.Net  |  All Rights Reserved  |  Powered by poging Adamsonians</p>
+    </footer>
+
+      <script>
+       
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+    
+     
+        function populateCart() {
+          let total = 0;
+          cartItemsContainer.innerHTML = ''; 
+          cart.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+            const row = `
+              <tr>
+                <td>${item.title}</td>
+                <td>₱${item.price}</td>
+                <td>${item.quantity}</td>
+                <td>₱${subtotal}</td>
+              </tr>
+            `;
+            cartItemsContainer.innerHTML += row;
+          });
+          totalPriceElement.textContent = total.toLocaleString();
+        }
+    
+        
+        document.getElementById('checkout-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thank you for your purchase!');
+          localStorage.removeItem('cart'); 
+          window.location.reload();
+        });
+    
+        
+        populateCart();
+      </script>
+</body>
+</html>
